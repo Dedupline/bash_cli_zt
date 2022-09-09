@@ -125,21 +125,21 @@ function  mainMenu() {
 	fi
 
 	clear
-	echo "################################"
-	echo "  ZeroTier Manager Controller   "
-	echo "################################"
+	echo "#################################"
+	echo "#  ZeroTier Manager Controller  #"
+	echo "#################################"
 	echo ""
 
-	echo "1. Create a new ZT Network on this controller"
-	echo "2. Delete a ZT Network on this controller"
-	echo "3. Peer Management"
-	echo "4. Edit Flow Rules for Network"
-	echo "5. List all networks"
-	echo "6. Manage Routes"
-	echo "7. Update Network Description"
-	echo "8. Update Network IP Assignment"
-	echo "[A]dvanced Options (edit /var/lib/zerotier/local.conf"
-	echo "[E]xit"
+	echo "[1] Create a new ZT Network on this controller"
+	echo "[2] Delete a ZT Network on this controller"
+	echo "[3] Peer Management"
+	echo "[4] Edit Flow Rules for Network"
+	echo "[5] List all networks"
+	echo "[6] Manage Routes"
+	echo "[7] Update Network Description"
+	echo "[8] Update Network IP Assignment"
+	echo "[A] Advanced Options (edit /var/lib/zerotier/local.conf"
+	echo "[E] Exit"
 	read -p  "Please select a numeric value: " todo
 
 	case "${todo}" in
@@ -165,7 +165,7 @@ function  mainMenu() {
 		allNets
 
 		delnet=$(echo "${net}" | awk ' { print $1 } ')
-		read -p "Are you sure you want to delete the network => ${net} [y|N]:" todelete
+		read -p "Are you sure you want to delete the network => ${net} [y|N]: " todelete
 
 		if [[ "${todelete}" == "y" ||  "${todelete}" == "yes" ]]; then
 
@@ -227,7 +227,7 @@ function  mainMenu() {
 
 			}
 			clear
-			read -p "Would you like to commit the changes? Y|n: " goflow
+			read -p "Would you like to commit the changes? [y|N]: " goflow
 
 			if [[ "${goflow}" =~ ^(y|Y)$ ]]; then
 
