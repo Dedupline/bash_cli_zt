@@ -31,7 +31,7 @@ done <<< "$ENTITIES"
  ((SELECTION--))
 
  echo
- printf 'Hit Enter when done: '
+ printf 'Press ENTER when done.'
 read -r opt
 if [[ $(seq 1 $SELECTION) =~ $opt ]]; then
 
