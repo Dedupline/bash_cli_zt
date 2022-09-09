@@ -72,11 +72,11 @@ function menu() {
 	echo "########################################################"
 	echo "${net}"
 	echo "########################################################"
-	echo "1. List routes"
-	echo "2. Add a route"
-	echo "3. Delete a route"
-	echo "[E]xit back to main ZT Menu"
-	read -p "Please select a number value next to the options. " choice
+	echo "[1] List routes"
+	echo "[2] Add a route"
+	echo "[3] Delete a route"
+	echo "[E] Exit back to main ZT Menu"
+	read -p "Please select a number value next to the options: " choice
 
 	case "${choice}" in
 
